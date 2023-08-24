@@ -24,11 +24,17 @@ permission_config:
   info: Permission Configuration for {server_name}
   permission_set: Permission for {subject} is now {status}
 bugs:
-  bug_info: "**Report a New Bug!**\nBrowse or search this channel to see bug reports. To report a bug, click/tap the {bug_emoji} reaction on this message and the bot will DM you for details. You must have DMs open for this server in order to submit a bug report."
-  shutdown_message: This bot is going offline, reporting bugs is not possible at this time. Please check back later to report your bug.
-  sweep_trash: Sorry to bother you, but you had an in-progress bug report that was idle for too long. I deleted it. If you think you received this message in error, please report me to the proper authorites (a moderator in the Sky server)
-  user_reset: Sorry to bother you, but if you had a Sky bug report active, it has been aborted. If you still have a bug to report, please try again later.
-  stop_spamming: "{user} stop spamming the bug reaction!"
+  no_live_windows: There is no live version available on Windows yet, only beta. Go back to the bug report channel any time to start a new report!
+  no_live_linux: There is no live version available on Linux yet, only beta. Go back to the bug report channel any time to start a new report!
+    **To find the Sky version and build number on Windows:**
+    > 1. Boot the game to the Title Screen (The screen with the Play button)
+    > 2. Look for the number in the bottom left corner (formatted as 0.0.0.X)
+    > 3. Please provide the full number
+  version_linux: |
+    **To find the Sky version on Linux:**
+    > 1. Open a terminal
+    > 2. Run the command `sky --version`
+    > 3. Please provide the full output
   reset_fail: I failed to reset an in-progress bug report for <@{uid}> so I'll just abandon the report. Maybe send them a DM if you want, I don't care either way.
   reset_success: I reset an in-progress bug report for <@{uid}> and informed them by DM
   start_over: "{user} You are already in the middle of reporting a bug. Do you want to cancel that report to start over?"
@@ -196,12 +202,30 @@ bugs:
     ```
     Do you have any other information to add to this report?
   question_additional_info: What other information would you like me to include in your report?
-  additional_info_yes: Provide additional information
-  question_attachments: |
-    ```css
-    Attachments
-    ```
-    Do you have screenshots, videos, or other documents to add? Video may be attached directly to this report, but size is limited for direct messages. If your video is too large, you can share it in the appropriate screenshot channel or on a site like youtube and add a link to your report instead.
+  bugs:
+    question_attachments: |
+      ```css
+      Attachments
+      ```
+      Do you have screenshots, videos, or other documents to add? Video may be attached directly to this report, but size is limited for direct messages. If your video is too large, you can share it in the appropriate screenshot channel or on a site like youtube and add a link to your report instead.
+    question_attachments_windows: |
+      🖥️ __**For Windows players**__ 🖥️
+      It's important to provide us with a .txt file of **DxDiag** info, so __**please react YES**__ and provide that in the next step.
+      
+      How to obtain DxDiag information:
+      > 1. From the Windows desktop, type dxdiag in the search field of the Windows taskbar.
+      > 1. Select the dxdiag Run command from the populated list.
+      > 1. In the DirectX Diagnostic Tool window, choose Save All Information.
+      > 1. In the Save As window, the DirectX information is saved as a text (.TXT) file. Choose the Desktop or another easily accessible location to save your file, and then click Save.
+    question_attachments_linux: |
+      🐧 __**For Linux players**__ 🐧
+      It's important to provide us with the output of **lshw** command, so __**please react YES**__ and provide that in the next step.
+      
+      How to obtain lshw information:
+      > 1. Open a terminal.
+      > 1. Run the command `sudo lshw -short`.
+      > 1. Copy the output and paste it into a text (.TXT) file.
+      > 1. Attach the text file in the next step.
   question_attachments_windows: |
     🖥️ __**For Windows players**__ 🖥️
     It's important to provide us with a .txt file of **DxDiag** info, so __**please react YES**__ and provide that in the next step.
