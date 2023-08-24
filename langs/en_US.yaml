@@ -72,7 +72,7 @@ bugs:
     ```css
     Device Type
     ```
-    What kind of device do you play Sky on?
+    What kind of operating system do you use Sky on?
   question_platform_version: |
     ```css
     Operating System Version
@@ -104,7 +104,7 @@ bugs:
     Sky App Type
     ```
     Are you using the `Live` or `Beta` version of Sky?
-    Beta is installed through TestFlight on iOS, through Google Groups on Android, or via invite code on Nintendo Switch.
+    Beta is installed through Steam on Windows, through Steam on Linux.
     If you are unsure, then choose Live
   app_version: Sky app version
   question_app_version: |
@@ -120,21 +120,20 @@ bugs:
     ```
     What **build** of the Sky app were you using when you experienced the bug?
     See the instructions above. The build number is in parentheses or 6 digits at the end of the version number.
-  version_android: |
-    **To find Sky version and build on Android devices:**
-    > 1. Device settings
-    > 2. Apps
-    > 3. Sky
-    > 4. Scroll down to find: `Version X.X.X (XXXXXX)`
-    > 5. The first 3 digits, `X.X.X` are the version, the 6 digits in parentheses are the build number
-    https://media.discordapp.net/attachments/575818186440572938/623647193143836674/sky_version_build3.jpg
-  version_ios: |
-    **To find Sky version and build on iOS devices:**
-    > 1. Device settings
-    > 2. Scroll down to Sky
-    > 3. Scroll down to find: `Version X.X.X (XXXXXX)`
+  version_windows: |
+    **To find Sky version and build on Windows devices:**
+    > 1. Open Steam
+    > 2. Navigate to Sky in your library
+    > 3. Right click and select properties
+    > 4. Under the local files tab, click on "Browse local files"
+    > 5. Open the "version.txt" file
+    > 6. The first 3 digits, `X.X.X` are the version, the 6 digits in parentheses are the build number
+  version_linux: |
+    **To find Sky version and build on Linux devices:**
+    > 1. Open Terminal
+    > 2. Navigate to the directory where Sky is installed
+    > 3. Use the command "cat version.txt"
     > 4. The first 3 digits, `X.X.X` are the version, the 6 digits in parentheses are the build number
-    https://media.discordapp.net/attachments/575818186440572938/623643882445471764/sky_version_ios2.png
   version_switch: |
     **To find the Sky build number for bug reporting:**
     > 1. Navigate to the Nintendo Switch home screen
