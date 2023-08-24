@@ -120,21 +120,16 @@ bugs:
     ```
     What **build** of the Sky app were you using when you experienced the bug?
     See the instructions above. The build number is in parentheses or 6 digits at the end of the version number.
-  version_android: |
-    --jp-- **To find Sky version and build on Android devices:**
-    > 1. Device settings
-    > 2. Apps
-    > 3. Sky
-    > 4. Scroll down to find: `Version X.X.X (XXXXXX)`
-    > 5. The first 3 digits, `X.X.X` are the version, the 6 digits in parentheses are the build number
-    https://media.discordapp.net/attachments/575818186440572938/623647193143836674/sky_version_build3.jpg
-  version_ios: |
-    --jp-- **To find Sky version and build on iOS devices:**
-    > 1. Device settings
-    > 2. Scroll down to Sky
-    > 3. Scroll down to find: `Version X.X.X (XXXXXX)`
-    > 4. The first 3 digits, `X.X.X` are the version, the 6 digits in parentheses are the build number
-    https://media.discordapp.net/attachments/575818186440572938/623643882445471764/sky_version_ios2.png
+  version_windows: |
+    --jp-- **To find the Sky version and build number on Windows:**
+    > 1. Boot the game to the Title Screen (The screen with the Play button)
+    > 2. Look for the number in the bottom left corner (formatted as 0.0.0.X)
+    > 3. Please provide the full number
+  version_linux: |
+    --jp-- **To find the Sky version and build number on Linux:**
+    > 1. Open the terminal
+    > 2. Run the command `sky --version`
+    > 3. Please provide the full output
   version_switch: |
     --jp-- **To find the Sky build number for bug reporting:**
     > 1. Navigate to the Nintendo Switch home screen
