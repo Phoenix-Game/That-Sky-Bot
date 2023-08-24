@@ -48,6 +48,27 @@ For a single reporting platform/branch combination, use any name:
 
 For multiply platforms and branches, name each:
 ```
+!bug platform add Windows Beta
+!bug platform add Windows Stable
+!bug platform add Linux Beta
+!bug platform add Linux Stable
+!bug platform add Switch Beta
+!bug platform add Switch Stable
+```
+
+## Bug Reporting Setup
+
+### Bug platform and branch configuration:
+
+Create database records for platforms and branches that can be used for reporting bugs. For any new platform or branch, changes to langs/en_US.yaml will be required.
+
+For a single reporting platform/branch combination, use any name:
+```
+!bug platform add default default
+```
+
+For multiply platforms and branches, name each:
+```
 !bug platform add Android Beta
 !bug platform add Android Stable
 !bug platform add iOS Stable
@@ -69,7 +90,7 @@ Channel permissions:
 
 Configure channels for every platform/branch combination above. Note that you can use the same channel to receive reports for more than one platform/branch if desired.
    ```
-  !bug channel add #mention-or-id Android Stable
+  !bug channel add #mention-or-id Windows Stable
    ```
 Bug reporting maintenance channel
 * Bug report maintenance channel permissions should hide the channel initially and prevent messaging and reacts
