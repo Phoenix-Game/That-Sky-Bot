@@ -67,20 +67,20 @@ bugs:
   device_info:
   question_device_info:
   device_info_switch:
-  device_info_ios:
-  device_info_android:
   device_info_playstation:
   device_info_windows:
+  device_info_linux:
+  device_info_linux:
   question_app_branch:
   app_version:
   question_app_version:
   app_build:
   question_app_build:
-  version_android:
-  version_ios:
   version_switch:
   version_playstation:
   version_windows:
+  version_linux:
+  version_linux:
   title:
   question_title:
   description:
@@ -95,11 +95,12 @@ bugs:
   additional_info_yes:
   question_attachments:
   question_attachments_windows:
+  question_attachments_linux:
   question_ok:
   send_report:
   mistake:
-  no_live_android:
   no_live_windows:
+  no_live_linux:
   dm_unable:
 eden:
   dm_prompt:

@@ -48,7 +48,6 @@ class Bugs(BaseCog):
                 queue_worker(f"Bug Queue {i}", self.bug_report_queue, self.run_bug_report))
             for i in range(200)
         ]
-
     async def cog_unload(self):
         if self.bug_report_queue.qsize() > 0:
             Logging.info(f"\tthere are {self.bug_report_queue.qsize()} bug reports not yet started...")
@@ -567,34 +566,33 @@ class Bugs(BaseCog):
             raise e
 
     async def actual_bug_reporter(self, user, trigger_channel):
-        # wrap everything so users can't get stuck in limbo
-        m = self.bot.metrics
-        active_question = None
-        restarting = False
-        try:
-            channel = await user.create_dm()
-            last_message = [message async for message in trigger_channel.history(limit=1)]
-            last_message = last_message[0]
-            ctx = await self.bot.get_context(last_message)
-
-            # vars to store everything
-            asking = True
-            platform = ""
-            branch = ""
-            app_build = None
-            platform_version = ''
-            app_version = ''
-            deviceinfo = ''
-            title = ''
-            actual = ''
-            steps = ''
-            expected = ''
-            additional = False
-            additional_text = ""
-            attachments = False
-            attachment_links = []
-            report = None
-
+            # wrap everything so users can't get stuck in limbo
+            m = self.bot.metrics
+            active_question = None
+            restarting = False
+            try:
+                channel = await user.create_dm()
+                last_message = [message async for message in trigger_channel.history(limit=1)]
+                last_message = last_message[0]
+                ctx = await self.bot.get_context(last_message)
+    
+                # vars to store everything
+                asking = True
+                platform = ""
+                branch = ""
+                app_build = None
+                platform_version = ''
+                app_version = ''
+                deviceinfo = ''
+                title = ''
+                actual = ''
+                steps = ''
+                expected = ''
+                additional = False
+                additional_text = ""
+                attachments = False
+                attachment_links = []
+                report = None
             # define all the parts we need as inner functions for easier sinfulness
 
             async def abort():
@@ -733,7 +731,7 @@ class Bugs(BaseCog):
             update_metrics()
 
             if asking:
-                # question 1: android or ios?
+                # question 1: Windows or Linux?
                 platforms = set()
                 for platform_row in await BugReportingPlatform.all():
                     platforms.add(platform_row.platform)
@@ -756,7 +754,7 @@ class Bugs(BaseCog):
                 update_metrics()
 
                 try:
-                    # question 2: android/ios version
+                    # question 2: Windows/Linux version
                     platform_version = await Questions.ask_text(
                         self.bot, channel, user,
                         Lang.get_locale_string("bugs/question_platform_version",
