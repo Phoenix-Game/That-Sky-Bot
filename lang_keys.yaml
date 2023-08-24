@@ -70,6 +70,7 @@ bugs:
   device_info_playstation:
   device_info_windows:
   device_info_linux:
+  device_info_linux:
   question_app_branch:
   app_version:
   question_app_version:
@@ -78,6 +79,7 @@ bugs:
   version_switch:
   version_playstation:
   version_windows:
+  version_linux:
   version_linux:
   title:
   question_title:
