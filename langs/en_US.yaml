@@ -90,8 +90,18 @@ bugs:
     > 1. Look on the back of your Switch
     > 2. The version looks like `MOD. XXX-000` with 3 letters and 3 numbers. Some Switch devices have additional numbers in parentheses
     https://media.discordapp.net/attachments/834518314264821810/840396032457965578/switch_version.jpg
-  device_info_ios: |
-  device_info_android: |
+  device_info_windows: |
+    Help us by providing the following details about your system:
+    
+    > 1. CPU model
+    > 2. GPU model
+    > 3. Physical RAM
+  device_info_linux: |
+    Help us by providing the following details about your system:
+    
+    > 1. Kernel version
+    > 2. Distro name and version
+    > 3. Desktop Environment (if any)
   device_info_playstation: |
   device_info_windows: |
     Help us by providing the following details about your system:
@@ -120,21 +130,16 @@ bugs:
     ```
     What **build** of the Sky app were you using when you experienced the bug?
     See the instructions above. The build number is in parentheses or 6 digits at the end of the version number.
-  version_android: |
-    **To find Sky version and build on Android devices:**
-    > 1. Device settings
-    > 2. Apps
-    > 3. Sky
-    > 4. Scroll down to find: `Version X.X.X (XXXXXX)`
-    > 5. The first 3 digits, `X.X.X` are the version, the 6 digits in parentheses are the build number
-    https://media.discordapp.net/attachments/575818186440572938/623647193143836674/sky_version_build3.jpg
-  version_ios: |
-    **To find Sky version and build on iOS devices:**
-    > 1. Device settings
-    > 2. Scroll down to Sky
-    > 3. Scroll down to find: `Version X.X.X (XXXXXX)`
-    > 4. The first 3 digits, `X.X.X` are the version, the 6 digits in parentheses are the build number
-    https://media.discordapp.net/attachments/575818186440572938/623643882445471764/sky_version_ios2.png
+  version_windows: |
+    **To find the Sky version and build number on Windows:**
+    > 1. Boot the game to the Title Screen (The screen with the Play button)
+    > 2. Look for the number in the bottom left corner (formatted as 0.0.0.X)
+    > 3. Please provide the full number
+  version_linux: |
+    **To find the Sky version on Linux:**
+    > 1. Open a terminal
+    > 2. Run the command `sky --version`
+    > 3. Please provide the full output
   version_switch: |
     **To find the Sky build number for bug reporting:**
     > 1. Navigate to the Nintendo Switch home screen
@@ -206,11 +211,20 @@ bugs:
     > 1. Select the dxdiag Run command from the populated list.
     > 1. In the DirectX Diagnostic Tool window, choose Save All Information.
     > 1. In the Save As window, the DirectX information is saved as a text (.TXT) file. Choose the Desktop or another easily accessible location to save your file, and then click Save.
+  question_attachments_linux: |
+    🐧 __**For Linux players**__ 🐧
+    It's important to provide us with the output of **lshw** command, so __**please react YES**__ and provide that in the next step.
+    
+    How to obtain lshw information:
+    > 1. Open a terminal.
+    > 1. Run the command `sudo lshw -short`.
+    > 1. Copy the output and paste it into a text (.TXT) file.
+    > 1. Attach the text file in the next step.
   question_ok: This is what your report will look like. Should I **submit** it or **discard** it? You have **{timeout} to review.**
   send_report: All done! Send this report
   mistake: Nope, I made a mistake. Throw away this report and start again
-  no_live_android: There is no live version available on Android yet, only beta. Go back to the bug report channel any time to start a new report!
   no_live_windows: There is no live version available on Windows yet, only beta. Go back to the bug report channel any time to start a new report!
+  no_live_linux: There is no live version available on Linux yet, only beta. Go back to the bug report channel any time to start a new report!
   dm_unable: '{user}, I was unable to DM you for questions about your bug, Please allow DMs from this server to file bug reports. You can enable this in the privacy settings, found in the server dropdown menu. Once your report is filed, you may disable DMs again if you like.'
 eden:
   dm_prompt: Did you know you can use the `!edenreset` or `!er` command in my DMs? Shorter cooldown there too.
